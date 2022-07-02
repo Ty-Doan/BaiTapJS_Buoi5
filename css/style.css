@@ -26,9 +26,9 @@ body {
 
 .bg-card {
     /* background-image: url(../img/corner-4.png); */
-    background-image: url(../img/jinx-background.webp);
+    background-image: url(../img/background_seadog.jpg);
     background-size: cover;
-    background-position: right;
+    background-position: top right;
     border-top-right-radius: .375rem;
     border-bottom-right-radius: .375rem
 }
@@ -119,5 +119,10 @@ body {
 }
 
 .card--heading {
-    color: yellow !important;
+    color: #fff !important;
+}
+
+.tab-pane {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
 }
