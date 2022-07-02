@@ -1,19 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <title>Bài tập Js buổi 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài tập if else</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./img/if-3.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="shortcut icon" type="image/x-icon" href="./img/function-9.png">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+
+    <!-- link CSS chính  -->
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
+
     <div class="container py-5">
 
         <div class="card w-100 mx-auto">
@@ -21,415 +29,90 @@
             <div class="card-body position-relative p-0">
                 <div class="row p-0">
                     <div class="col-12 col-md-4 col-lg-3 col-xl-2 nav-tabs nav flex-md-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link btn-tabs mb-2 active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#bai5" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Bài 5</button>
-                        <button class="nav-link btn-tabs mb-2" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#bai6" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Bài 6</button>
-                        <button class="nav-link btn-tabs mb-2" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#bai7" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Bài 7</button>
-                        <button class="nav-link btn-tabs mb-2" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#bai8" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Bài 8</button>
+                        <button class="nav-link btn-tabs mb-2 active " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#bai1" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Bài 1</button>
+                        <button class="nav-link btn-tabs mb-2" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#bai2" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Bài 2</button>
                     </div>
                     <div class="col-12 col-md-8 col-lg-9 col-xl-10 tab-content" id="v-pills-tabContent">
-                        <div class="tab-pane fade show active" id="bai5" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                            <h4 class="card--heading">📅 Tính ngày tháng năm</h4>
+                        <div class="tab-pane fade show active" id="bai1" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <h4 class="card--heading">🏫 Quản lý tuyển sinh</h4>
                             <div class="callout callout-info">
-                                <p>
-                                    📝<b>Note: Bài tập này không bắt buộc làm nên không làm hoặc bị lỗi sẽ không bị trừ
-                                        điểm.</b>
-                                    <br> Giả sử người dùng nhập đúng nên không cần kiểm tra hợp lệ
-                                </p>
-                                <p>💡<b>Gợi ý:</b></p>
+                                <p>💡<b>Gợi ý:</b> </p>
                                 <details>
                                     <summary>Mở rộng để xem thêm</summary>
                                     <ul>
-                                        <li> Form nhập thông tin có thể tạo bằng input loại number, dropwdown hoặc input loại date đều được</li>
-                                        <li> Tháng 2 không cần xác định năm nhuận, lấy mặc định là 28 ngày</li>
-                                        <li> Khi người dùng chọn xem Ngày Mai thì chỉ cần tăng giá trị ngày lên 1. Ngược lại, xem Ngày Hôm Qua thì trừ đi 1.</li>
-                                        <li> Những ngày đầu hoặc cuối tháng phải xử lý riêng. Ngày đầu tháng thì xem Ngày Hôm Qua phải là ngày cuối của tháng trước đó. Ngày cuối tháng thì xem Ngày Mai phải là ngày đầu của tháng kế tiếp. Tương tự với ngày đầu
-                                            năm và cuối năm </li>
+                                        <li>Điểm chuẩn của hội đồng các bạn tự nhập thêm. Điểm chuẩn của 3 môn thường tối đa 30đ. <br> Nên có thể lấy các điểm chuẩn như sau: 30,25,29</li>
+                                        <li>Ô nhập khu vực, đối tượng có thể tạo bằng input, dropdown hoặc radio.<br> Nếu không thuộc khu vực hoặc đối tượng trong danh sách thì điểm khu vực và điểm đối tượng sẽ là 0 </li>
+                                        <li>Nếu có 1 trong 3 môn bị điểm 0 thì lặp tức cho rớt không cần kiểm tra tổng điểm có lớn hơn hoặc bằng điểm chuẩn hay không</li>
                                     </ul>
                                 </details>
-                                <hr>
-                                <details>
-                                    <summary><b>Mô hình 3 khối :</b></summary>
-                                    <ul>
-                                        <li>Input
-                                            <ul>
-                                                <li>3 biến ngay, thang, nam lưu giá trị người dùng nhập: kiểu number/Integer</li>
-                                            </ul>
-                                        </li>
-                                        <li>Output
-                                            <ul>
-                                                <li>biến ngayHomQua lưu giá trị ngày hôm qua: kiểu string</li>
-                                                <li>biến ngayMai lưu giá trị ngày mai: kiểu string</li>
-                                            </ul>
-                                        </li>
-                                        <li>Progress
-                                            <ul>
-                                                <li>tạo biến ngay, thang, nam lưu giá trị ngày tháng năm người dùng nhập</li>
-                                                <li>Tạo biến ngayHomQua = ' ', biến ngayMai = ' '</li>
-                                                <li>Xử lý button Ngày Mai
-                                                    <ul>
-                                                        <li>Trường hợp tháng 1,3,5,7,8,10
-                                                            <ul>
-                                                                <li>Nếu 0 &lt; ngày &lt; 31, thì ngayMai = (ngay + 1)/thang/nam</li>
-                                                                <li>Nếu ngay = 31, thì ngayMai = 1/(thang + 1)/nam</li>
-                                                                <li>còn lại, ngayMai = 'Ngày không xác định !'</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Trường hợp tháng 2
-                                                            <ul>
-                                                                <li>Nếu 0 &lt; ngày &lt; 28, thì ngayMai = (ngay + 1)/thang/nam</li>
-                                                                <li>Nếu ngay = 28, thì ngayMai = 1/(thang + 1)/nam</li>
-                                                                <li>còn lại, ngayMai = 'Ngày không xác định !'</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Trường hợp tháng 4,6,9,11
-                                                            <ul>
-                                                                <li>Nếu 0 &lt; ngày &lt; 30, thì ngayMai = (ngay + 1)/thang/nam</li>
-                                                                <li>Nếu ngay = 30, thì ngayMai = 1/(thang + 1)/nam</li>
-                                                                <li>còn lại, ngayMai = 'Ngày không xác định !'</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Trường hợp tháng 12
-                                                            <ul>
-                                                                <li>Nếu 0 &lt; ngày &lt; 31, thì ngayMai = (ngay + 1)/thang/nam</li>
-                                                                <li>Nếu ngay = 31, thì ngayMai = 1/1/(nam + 1)</li>
-                                                                <li>còn lại, ngayMai = 'Ngày không xác định !'</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Xử lý button ngày Hôm Qua
-                                                    <ul>
-                                                        <li>Trường hợp tháng 5,7,8,10,12
-                                                            <ul>
-                                                                <li>Nếu 1 &lt; ngày &lt; 32, thì ngayHomQua = (ngay - 1)/thang/nam</li>
-                                                                <li>Nếu ngay = 1, thì ngayHomQua = 30/(thang - 1)/nam</li>
-                                                                <li>còn lại, ngayHomQua = 'Ngày không xác định !'</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Trường hợp tháng 4,6,9,11
-                                                            <ul>
-                                                                <li>Nếu 1 &lt; ngày &lt; 31, thì ngayHomQua = (ngay - 1)/thang/nam</li>
-                                                                <li>Nếu ngay = 1, thì ngayHomQua = 31/(thang - 1)/nam</li>
-                                                                <li>còn lại, ngayHomQua = 'Ngày không xác định !'</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Trường hợp tháng 3
-                                                            <ul>
-                                                                <li>Nếu 1 &lt; ngày &lt; 32, thì ngayHomQua = (ngay - 1)/thang/nam</li>
-                                                                <li>Nếu ngay = 1, thì ngayHomQua = 28/(thang - 1)/nam</li>
-                                                                <li>còn lại, ngayHomQua = 'Ngày không xác định !'</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Trường hợp tháng 2
-                                                            <ul>
-                                                                <li>Nếu 1 &lt; ngày &lt; 29, thì ngayHomQua = (ngay - 1)/thang/nam</li>
-                                                                <li>Nếu ngay = 1, thì ngayHomQua = 31/(thang - 1)/nam</li>
-                                                                <li>còn lại, ngayHomQua = 'Ngày không xác định !'</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Trường hợp tháng 1
-                                                            <ul>
-                                                                <li>Nếu 1 &lt; ngày &lt; 32, thì ngayHomQua = (ngay - 1)/thang/nam</li>
-                                                                <li>Nếu ngay = 1, thì ngayHomQua = 31/12/(nam - 1)</li>
-                                                                <li>còn lại, ngayHomQua = 'Ngày không xác định !'</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </details>
-
                             </div>
                             <form class="row gy-3 align-items-center px-2">
                                 <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputDay" placeholder="Nhập Ngày">
+                                    <input type="number" class="form-control form__input" id="inputScore1" placeholder="Điểm chuẩn">
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputMonth" placeholder="Nhập Tháng">
+                                    <select class="form-control form__input" name="" id="selLocation">
+                                        <option value="0">Chọn khu vực</option>
+                                        <option value="2">A</option>
+                                        <option value="1">B</option>
+                                        <option value="0.5">C</option>
+                                    </select>
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputYear" placeholder="Nhập Năm">
+                                    <select class="form-control form__input" name="" id="selUser">
+                                        <option value="0">Chọn đối tượng</option>
+                                        <option value="2.5">1</option>
+                                        <option value="1.5">2</option>
+                                        <option value="1">3</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputScore2" placeholder="Điểm môn thứ 1">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputScore3" placeholder="Điểm môn thứ 2">
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <input type="number" class="form-control form__input" id="inputScore4" placeholder="Điểm môn thứ 3">
                                 </div>
 
-                                <div class="col-4">
-                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnYesterday">Ngày Hôm
-                                        Qua</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnTomorrow">Ngày
-                                        Mai</button>
+                                <div class="col-12">
+                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnResult">Kết
+                                        Quả</button>
                                 </div>
                                 <div class="alert alert-success" role="alert">
-                                    👉<span id="txtDate"></span>
+                                    👉<span id="txtResult"></span>
                                 </div>
                             </form>
                         </div>
-                        <div class="tab-pane fade" id="bai6" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                            <h4 class="card--heading">🗓️ Tính ngày</h4>
+                        <div class="tab-pane fade" id="bai2" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <h4 class="card--heading">🔋 Tính tiền điện</h4>
                             <div class="callout callout-info">
-                                <p>
-                                    📝<b>Note: Bài tập này không bắt buộc làm nên không làm hoặc bị lỗi sẽ không bị trừ
-                                        điểm.</b>
-                                    <br> Giả sử người dùng nhập đúng nên không cần kiểm tra hợp lệ
-                                </p>
-                                <p>💡<b>Gợi ý:</b></p>
+                                <p>💡<b>Gợi ý:</b> </p>
                                 <details>
                                     <summary>Mở rộng để xem thêm</summary>
-                                    <ul>
-                                        <li> Form nhập thông tin có thể tạo bằng input loại number, dropwdown hoặc input loại date đều được</li>
-                                        <li>Đối với tháng 2, nếu là năm nhuận sẽ có 29 ngày. Cách kiểm tra năm nhuận:
-                                            <ul>
-                                                <li>Năm chia hết cho 4 nhưng không chia hết cho 100. Vd:2012, 2016, 2020 </li>
-                                                <li>Hoặc năm chia hết cho 400. Vd:1600, 1200 </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                    <p class="px-3">
+                                        Cách tính tiền điện gần giống với bài tính tiền Grab trên lớp <br>
+                                        <img class="img-fluid" src="./img/Bai2.JPG" alt="">
+                                    </p>
                                 </details>
-                                <hr>
-                                <p><b>Mô hình 3 khối :</b></p>
-                                <ul>
-                                    <li>Input
-                                        <ul>
-                                            <li>tháng năm người dùng nhập : kiểu number</li>
-                                        </ul>
-                                    </li>
-                                    <li>Output
-                                        <ul>
-                                            <li>soNgayCuaThang: chuỗi string</li>
-                                        </ul>
-                                    </li>
-                                    <li>Progress
-                                        <ul>
-                                            <li>tạo biến thang, nam lưu tháng năm mà người dùng nhập</li>
-                                            <li>tạo biến soNgayCuaThang lưu số ngày của tháng</li>
-                                            <li>Dùng if Else
-                                                <ul>
-                                                    <li>Nếu tháng = (1||3||5||7||8||10||12), thì soNgayCuaThang = 31</li>
-                                                    <li>Nếu tháng = (4||6||9||11), thì soNgayCuaThang = 30</li>
-                                                    <li>Nếu tháng = 2,
-                                                        <ul>
-                                                            <li>Nếu (năm % 4 == 0), thì soNgayCuaThang = 29</li>
-                                                            <li>còn lại, thì soNgayCuaThang = 28</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-
                             </div>
                             <form class="row gy-3 align-items-center px-2">
                                 <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputMonth2" placeholder="Nhập Tháng">
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputYear2" placeholder="Nhập Năm">
+                                    <input type="text" class="form-control form__input" id="inputName" placeholder="Nhập họ tên">
                                 </div>
 
                                 <div class="col-12 col-lg-4">
-                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnCalcDay">Tính Ngày</button>
+                                    <input type="number" class="form-control form__input" id="inputKW" placeholder="Nhập số kw">
+                                </div>
+
+
+                                <div class="col-12">
+                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnElecBill">Tính tiền
+                                        điện</button>
                                 </div>
                                 <div class="alert alert-success" role="alert">
-                                    👉<span id="txtCalcDay"></span>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="bai7" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                            <h4 class="card--heading">🔢 Đọc số</h4>
-                            <div class="callout callout-info">
-                                <p>
-                                    📝<b>Note: Bài tập này không bắt buộc làm nên không làm hoặc bị lỗi sẽ không bị trừ
-                                        điểm.</b>
-                                    <br> Giả sử người dùng nhập đúng nên không cần kiểm tra hợp lệ
-                                </p>
-                                <p>💡<b>Gợi ý:</b>
-                                </p>
-                                <details>
-                                    <summary>Mở rộng để xem thêm</summary>
-                                    <ul>
-                                        <li> Sử dụng cách lấy số hàng trăm, hàng chục, hàng đơn vị</li>
-                                        <li>Sử dụng <i>if...else if...else</i> hoặc <i>switch case</i> để xử lý cách đọc số. Vd: 3 => ba, 2 => hai ...
-                                        </li>
-                                    </ul>
-                                </details>
-                                <details>
-                                    <summary>
-                                        <b>Mô hình 3 khối :</b>
-                                    </summary>
-                                    <ul>
-                                        <li>Input: số người dùng nhập vào: number</li>
-                                        <li>Output: chuỗi string (cách đọc của số đó)</li>
-                                        <li>Progress
-                                            <ul>
-                                                <li>tạo biến number lưu số mà người dùng nhập vào</li>
-                                                <li>tạo biến htmlString ="" lưu các đọc của só đó</li>
-                                                <li>dùng If...Else để xác định số âm
-                                                    <ul>
-                                                        <li>Nếu number = 5, htmlString = 'năm'</li>
-                                                        <li>Nếu number = -5, htmlString = 'âm năm'</li>
-                                                        <li>Nếu number &lt; 0, htmlString += 'âm'</li>
-                                                        <li>Nếu number = 0, htmlString = 'Không'</li>
-                                                        <li>Nếu number > 0, htmlString = htmlString</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Viết hàm đọc chữ số (3 chữ số), dùng Switch...case để đọc chữ số
-                                                    <ul>
-                                                        <li>tham số truyền vào: số nunber</li>
-                                                        <li>kết quả trả về: docSo: chuỗi string</li>
-                                                        <li>tạo biến hangTram, hangChuc, hangDonVi lưu chữ số hàng trăm, hàng chụ, hàng Đơn Vị của số dó
-                                                            <ul>
-                                                                <li>hangTram = Math.floor(number / 100) </li>
-                                                                <li>hangChuc = Math.floor((number % 100) / 10)</li>
-                                                                <li>hangDonVi = Math.floor((number % 100) % 10)</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            Switch(hangTram) { <br> case 1: docSo += 'một trăm'; break; <br> case 2: docSo += 'hai trăm'; break; <br> case 3: docSo += 'ba trăm'; break; <br> case 4: docSo += 'bốn trăm'; break; <br> case
-                                                            5: docSo += 'năm trăm'; break; <br> case 6: docSo += 'sáu trăm'; break; <br> case 7: docSo += 'bảy trăm'; break; <br> case 8: docSo += 'tám trăm'; break; <br> case 9: docSo += 'chín trăm'; break;
-                                                            }
-                                                        </li>
-                                                        <li>Tương tự với hàng chục và hàng đơn vị, 5 = 'lăm'</li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </details>
-
-
-                            </div>
-                            <form class="row gy-3 align-items-center px-2">
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputReadInt" placeholder="Nhập số 3 chữ số">
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnReadInt">Đọc Số</button>
-                                </div>
-                                <div class="alert alert-success" role="alert">
-                                    👉<span id="txtReadInt"></span>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="bai8" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                            <h4 class="card--heading">🗺️ Tìm sinh viên xa trường nhất</h4>
-                            <div class="callout callout-info">
-                                <p>
-                                    📝<b>Note: Bài tập này không bắt buộc làm nên không làm hoặc bị lỗi sẽ không bị trừ
-                                        điểm.</b>
-                                    <br> Giả sử người dùng nhập đúng nên không cần kiểm tra hợp lệ. Và các sinh viên ở các địa điểm khác nhau không ở chung.
-                                    <br> Chỉ cần tính quãng đường theo tọa độ 2 đầu của 1 đoạn thẳng trên mặt phẳng
-                                </p>
-                                <p>💡<b>Gợi ý:</b>
-                                </p>
-                                <details>
-                                    <summary>Mở rộng để xem thêm</summary>
-                                    <ul>
-                                        <li> Áp dụng cách tính đoạn thẳng theo tọa độ
-                                            <ul>
-                                                <li>d là độ dài đoạn thẳng. (x1, y1) là tọa độ điểm đầu của đoạn thẳng. (x2, y2) là tọa độ điểm thứ 2 của đoạn thẳng</li>
-                                                <li><img src="https://cdn.jsdelivr.net/gh/khloe1425/BaiTapIfElse@master/img/e82b29b690b69383a7c8512ef0223a0e353ec94c.svg" alt=""></li>
-                                            </ul>
-                                        </li>
-                                        <li>Sử dụng <i>if...else if...else</i> để so sánh độ dài các đoạn đường. Sau khi xác định được đoạn đường dài nhất thì thông báo tên sinh viên
-                                        </li>
-                                    </ul>
-                                </details>
-                                <details>
-                                    <summary><b>Mô hình 3 khối :</b></summary>
-                                    <ul>
-                                        <li>Input
-                                            <ul>
-                                                <li>Tên của 3 sinh viên: kiểu String</li>
-                                                <li>Toạ độ (x1,y1), (x2,y2)), (x3, y3) lần lượt của 3 sinh viên</li>
-                                                <li>Toạ độ (x,y) của trường</li>
-                                            </ul>
-                                        </li>
-                                        <li>Output: tên của sinh viên xa trường nhất: string</li>
-                                        <li>Progress
-                                            <ul>
-                                                <li>tạo biến ten1, ten2, ten3 để lưu tên của 3 sinh viên</li>
-                                                <li>tạo biến x1, y1 để lưu toạ độ của sinh viên 1</li>
-                                                <li>tạo biến x2, y2 để lưu toạ độ của sinh viên 2</li>
-                                                <li>tạo biến x3, y3 để lưu toạ độ của sinh viên 3</li>
-                                                <li>tạo biến x, y để lưu toạ độ của trường</li>
-                                                <li>tạo biến htmlString = "Sinh viên xa trường nhất là : " , lưu kết quả</li>
-                                                <li>tạo biến xx1 để lưu khoảng cách của sinh viên 1 đến trường</li>
-                                                <li>tạo biến xx2 để lưu khoảng cách của sinh viên 2 đến trường</li>
-                                                <li>tạo biến xx3 để lưu khoảng cách của sinh viên 3 đến trường</li>
-                                                <li>tạo biến max = xx1, tạm xem xx1 là khoảng cách xa nhất</li>
-                                                <li>Dùng If...Else
-                                                    <ul>
-                                                        <li>Nếu xx2 > max, thì max = xx2</li>
-                                                        <li>Nếu xx3 > max, thì max = xx3</li>
-                                                    </ul>
-                                                </li>
-                                                <li>sau đó dùng if...else đê kết luận
-                                                    <ul>
-                                                        <li>nếu max = xx1, htmlString += 'A'</li>
-                                                        <li>nếu max = xx2, htmlString += 'B'</li>
-                                                        <li>nếu max = xx3, htmlString += 'C'</li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                        </li>
-                                    </ul>
-                                </details>
-                            </div>
-                            <form class="row gy-3 align-items-center px-2">
-                                <div class="col-12">
-                                    <h5>Sinh Viên 1</h5>
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="text" class="form-control form__input" id="inputName1" placeholder="Nhập tên">
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputX1" placeholder="Nhập tọa độ x">
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputY1" placeholder="Nhập tọa độ y">
-                                </div>
-                                <div class="col-12">
-                                    <h5>Sinh Viên 2</h5>
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="text" class="form-control form__input" id="inputName2" placeholder="Nhập tên">
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputX2" placeholder="Nhập tọa độ x">
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputY2" placeholder="Nhập tọa độ y">
-                                </div>
-                                <div class="col-12">
-                                    <h5>Sinh Viên 3</h5>
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="text" class="form-control form__input" id="inputName3" placeholder="Nhập tên">
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputX3" placeholder="Nhập tọa độ x">
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputY3" placeholder="Nhập tọa độ y">
-                                </div>
-                                <div class="col-12">
-                                    <h5>Trường học</h5>
-                                </div>
-
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputX4" placeholder="Nhập tọa độ x">
-                                </div>
-                                <div class="col-12 col-lg-4">
-                                    <input type="number" class="form-control form__input" id="inputY4" placeholder="Nhập tọa độ y">
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn--primary me-1 mb-1" type="button" id="btnSearch">Tìm</button>
-                                </div>
-                                <div class="alert alert-success" role="alert">👉<span id="txtSearch"></span>
+                                    👉<span id="txtElecBill"></span>
                                 </div>
                             </form>
                         </div>
@@ -437,26 +120,22 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- link JS chính  -->
     <script src="./js/main.js"></script>
-</body>
-
-</html>
-
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="./js/main.js"></script>
 
 </body>
 
