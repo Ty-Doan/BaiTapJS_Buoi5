@@ -45,6 +45,38 @@
                                         <li>Nếu có 1 trong 3 môn bị điểm 0 thì lặp tức cho rớt không cần kiểm tra tổng điểm có lớn hơn hoặc bằng điểm chuẩn hay không</li>
                                     </ul>
                                 </details>
+                                <details>
+                                    <summary><b>Mô hình 3 khối : </b></summary>
+                                    <ul>
+                                        <li>Input (do người dùng nhập)
+                                            <ul>
+                                                <li>Điểm chuẩn, điểm môn thứ 1, 2, 3: kiểu number</li>
+                                                <li>ĐIểm hệ số khu vực và đối tượng: kiểu number</li>
+                                            </ul>
+                                        </li>
+                                        <li>Output
+                                            <ul>
+                                                <li>Tổng điểm đã tính theo công thức: kiểu number</li>
+                                                <li>Trạng thái đậu rớt: chuỗi string</li>
+                                            </ul>
+                                        </li>
+                                        <li>progress
+                                            <ul>
+                                                <li>tạo biến diemChuan, diem1, diem2, diem3 lưu điểm chuẩn và điểm của môn thứ 1, 2, 3</li>
+                                                <li>tạo biến diemKhuVuc, diemDoiTuong lưu điểm khu vực và điểm đối tượng</li>
+                                                <li>tạo biến diemTongKet = (diem1 + diem2 + diem3 + diemDoiTuong + diemKhuVuc) lưu điểm dã tính của sinh viên</li>
+                                                <li>tạo biến ketQua lưu kết quả đậu rớt</li>
+                                                <li>dùng if...else
+                                                    <ul>
+                                                        <li>nếu (diem1 == 0)||(diem2 == 0)||(diem 3 == 0), ketQua = "Rớt do có cột điểm = 0"</li>
+                                                        <li>nếu diemTongKet &lt; diemChuan, ketQua = 'Rớt do điểm tổng kết nhỏ hơn điểm chuẩn' </li>
+                                                        <li>Nếu diemTongKet &gt; diemChuan, ketQua = 'Đậu. Điểm tổng kết = ', diemTongKet</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </details>
                             </div>
                             <form class="row gy-3 align-items-center px-2">
                                 <div class="col-12 col-lg-4">
@@ -95,6 +127,35 @@
                                         Cách tính tiền điện gần giống với bài tính tiền Grab trên lớp <br>
                                         <img class="img-fluid" src="./img/Bai2.JPG" alt="">
                                     </p>
+                                </details>
+                                <details>
+                                    <summary><b>Mô hình 3 khối :</b></summary>
+                                    <ul>
+                                        <li>Input
+                                            <ul>
+                                                <li>Họ tên của chủ hộ: kiểu string</li>
+                                                <li>Số kw điện của hộ: kiểu number</li>
+                                            </ul>
+                                        </li>
+                                        <li>Output: Tổng số tiền điện của hộ: number</li>
+                                        <li>Progress
+                                            <ul>
+                                                <li>tạo biến ten lưu tên của chủ hộ</li>
+                                                <li>tạo biến soKW lưu số kw điện của hộ đó</li>
+                                                <li>tạo biến tienDien = 0 lưu số tiền điện của hộ đã tính</li>
+                                                <li>khai báo hằng cho các mốc tiền điện: kw_1 = 500, kw_2 = 650, kw_3 = 805, kw_4 = 1100, kw_5 = 1300</li>
+                                                <li>dùng IF...else...
+                                                    <ul>
+                                                        <li>nếu 0 &lt; soKW &lt;= 50, tienDien = soKW * kw_1</li>
+                                                        <li>nếu 50 &lt; soKW &lt;= 100, tienDien = 50 * kw_1 + (soKW - 50) * kw_2</li>
+                                                        <li>nếu 100 &lt; soKW &lt;= 200, tienDien = 50 * kw_1 + 50 * kw_2 + (tienDien - 100) * kw_3</li>
+                                                        <li>nếu 200 &lt; soKW &lt;= 350, tienDien = 50 * kw_1 + 50 * kw_2 + 100 + kw_3 + (tienDien - 200) * kw_4</li>
+                                                        <li>nếu soKW &gt; 350, tienDien = 50 * kw_1 + 50 * kw_2 + 100 + kw_3 + 150 * kw_4 + (tienDien - 350) * kw_5 </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </details>
                             </div>
                             <form class="row gy-3 align-items-center px-2">
